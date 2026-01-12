@@ -17,8 +17,12 @@ function resizeCanvas(){
 
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
+
 // SABİT YERÇEKİMİ
 const gravity = 0.4;
+
+// TOP YERÇEKİMİ (bir tık daha hafif)
+const ballGravity = 0.25;
 
 // Oyuncular
 let p1 = { x:150, y:360, size:30, dy:0, onGround:true, charging:false, jumpCharge:0, maxJump:14 };
