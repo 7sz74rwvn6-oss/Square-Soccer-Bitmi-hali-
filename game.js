@@ -109,7 +109,7 @@ function update(){
 
   ball.x += ball.vx;
   ball.y += ball.vy;
-
+ball.vy += ballGravity;
   // Üst-alt sınır
   if(ball.y - ball.r < 0){
     ball.y = ball.r;
