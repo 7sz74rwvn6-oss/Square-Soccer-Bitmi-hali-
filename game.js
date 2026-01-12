@@ -1,6 +1,22 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
+function resizeCanvas(){
+  const ratio = 2; // 900 / 450
+  let w = window.innerWidth;
+  let h = window.innerHeight;
 
+  if (w / h > ratio) {
+    w = h * ratio;
+  } else {
+    h = w / ratio;
+  }
+
+  canvas.style.width = w + "px";
+  canvas.style.height = h + "px";
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
 // SABİT YERÇEKİMİ
 const gravity = 0.4;
 
